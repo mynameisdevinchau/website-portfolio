@@ -6,6 +6,8 @@ import "./App.css";
 //imports for different sections
 import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
+import ExperienceSection from "./sections/ExperienceSection"
+import ProjectSection from "./sections/ProjectSection"
 
 function App() {
   /*
@@ -17,6 +19,8 @@ function App() {
     <>
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
+      <ExperienceSection></ExperienceSection>
+      <ProjectSection></ProjectSection>
     </>
   );
 }
