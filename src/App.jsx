@@ -17,10 +17,14 @@ function App() {
 */
   return (
     <>
+        {/* <div className="min-h-screen bg-black text-white"> */}
+
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
       <ExperienceSection></ExperienceSection>
       <ProjectSection></ProjectSection>
+          {/* </div> */}
+
     </>
   );
 }

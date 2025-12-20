@@ -1,6 +1,6 @@
 function AboutSection() {
   return (
-    <section className="min-h-screen flex flex-col justify-center px-8 bg-pink-200">
+    <section className="min-h-screen flex flex-col justify-center px-8 bg-blue-200">
 
       {/* The idea behind this is that I want to have the same fonts for the major points
       and then for the answers, a different, sleek font */}
