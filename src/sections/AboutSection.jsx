@@ -1,39 +1,73 @@
+import { useRef, useEffect } from "react";
 function AboutSection() {
-  return (
-    <section className="min-h-screen flex flex-col justify-center px-8 bg-blue-200">
+  const containerRef = useRef(null);
+  const horizontalRef = useRef(null);
 
+  {
+    /* This useEffect is for horizontal scrolling */
+  }
+  useEffect(() => {
+    const onScroll = () => {
+      if (!containerRef.current || !horizontalRef.current) return;
+
+      const container = containerRef.current;
+      const horizontal = horizontalRef.current;
+
+      const rect = container.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const scrollableHeight = container.offsetHeight - viewportHeight;
+
+      const scrolled = Math.min(Math.max(-rect.top, 0), scrollableHeight);
+
+      const progress = scrolled / scrollableHeight;
+
+      const maxScroll = horizontal.scrollWidth - horizontal.clientWidth;
+
+      horizontal.scrollLeft = progress * maxScroll;
+    };
+
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <section
+      ref={containerRef}
+      style={{ height: "300vh" }}
+      className="relative bg-blue-200 border-8"
+    >
       {/* The idea behind this is that I want to have the same fonts for the major points
       and then for the answers, a different, sleek font */}
-      <div className ="flex flex-row p-12">
-        {/* This first section is for the text on the left
+      {/* This first section is for the text on the left
         The second part of the flex-row will entail perhaps images
         or perhaps display the text from the left flexbox */}
-    <div className="flex flex-col p-12">
-      <h1 className="text-4xl font-bold mb-6">About Me</h1>
+      {/* Sticky pinned viewport */}
+      <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+        <div
+          ref={horizontalRef}
+          className="flex flex-row gap-24 px-12 overflow-hidden scrollbar-hide"
+        >
+          <div className="min-w-[100vw]">
+            <h1 className="text-4xl font-bold">About Me</h1>
+          </div>
 
-      <h1 className="text-4xl font-bold mb-6">
-        {/* Maybe I can talk about stories? maybe a carosel?  */}
-        Who Am I?  
-      </h1>
+          <div className="min-w-[100vw]">
+            <h1 className="text-4xl font-bold">Who Am I?</h1>
+          </div>
 
-      <h1 className="text-4xl font-bold mb-6">
-        
-      </h1>
+          <div className="min-w-[100vw]">
+            <h1 className="text-4xl font-bold">My Story</h1>
+          </div>
 
-      <p className="text-4xl font-bold mb-6">
-        what
-      </p>
-       </div>
-
-       {/* This will be where the carousel or image will go
-       I'll need to adjust the spacing properly but the idea is there */}
-      <div className=" ">
-              <img
-                src="black.png"
-                // className="w-80 h-80 rounded-xl object-cover"
-              />
-      </div>
-
+          <div className="min-w-[100vw] flex items-center justify-center">
+            <img
+              src="black.png"
+              className="w-80 h-80 rounded-xl object-cover"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

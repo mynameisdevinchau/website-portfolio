@@ -1,4 +1,4 @@
-function ProjectSection(){
-
+function ProjectSection() {
+  return <></>;
 }
-export default ProjectSection
+export default ProjectSection;

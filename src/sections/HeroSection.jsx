@@ -1,7 +1,8 @@
 function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-between gap-8 px-12 bg-blue-200">
-      {/* keeping color at bg-blue-200 to change to a grainy, beige background*/}
+    <section className="min-h-screen flex items-center justify-between gap-8 px-12 bg-blue-200 border-8">
+      {/* keeping color at bg-blue-200 border-8 to change to a grainy, beige background
+      border-8 used to seperate aesthetically*/}
 
       {/* Left side will focus on dynamic text */}
       <div className="flex flex-col flex-[4]">
