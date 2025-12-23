@@ -1,50 +1,89 @@
-function AboutSection() {
+import { useEffect, useRef, useState } from "react";
+
+function Card({ index, activeCount, className, title, description, tags }) {
+  const isVisible = index < activeCount;
+
   return (
-    <section className="relative min-h-screen flex items-center px-6 md:px-12 py-20 bg-[#fbf6ea] border-8 border-blue-500">
-      <h2 className="absolute top-6 left-6 md:top-8 md:left-12 text-3xl md:text-4xl font-bold text-black">
-        About
-      </h2>
+    <div
+      className={`
+        absolute transition-all duration-700 ease-out
+        ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+        ${className}
+      `}
+    >
+      <div className="w-60 h-100 bg-white rounded-lg shadow-lg p-6 border border-gray-400">
+        <h4 className="font-semibold text-lg text-black mb-2">{title}</h4>
+        <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+          {description}
+        </p>
+      </div>
+    </div>
+  );
+}
 
-      <div className="mx-auto max-w-5xl flex flex-col md:flex-row items-center gap-10 w-full">
-        <div className="flex-1">
-          <p className="text-lg text-gray-700 max-w-2xl leading-relaxed">
-            I'm a software engineer focusing on creating fun, user-friendly
-            experiences. I build interactive apps using{" "}
-            <span className="font-medium text-black bg-white/60 px-2 py-0.5 rounded">
-              React
-            </span>
-            ,{" "}
-            <span className="font-medium text-black bg-white/60 px-2 py-0.5 rounded">
-              JavaScript
-            </span>
-            , and{" "}
-            <span className="font-medium text-black bg-white/60 px-2 py-0.5 rounded">
-              CSS
-            </span>{" "}
-            — and I enjoy turning ideas into delightful interfaces.
-          </p>
+function AboutSection() {
+  const sectionRef = useRef(null);
+  const [activeCount, setActiveCount] = useState(0);
 
-          <div className="mt-6 flex flex-wrap gap-3">
-            <span className="px-3 py-1 bg-white/60 backdrop-blur-sm rounded-full text-sm text-black border">
-              UI
-            </span>
-            <span className="px-3 py-1 bg-white/60 backdrop-blur-sm rounded-full text-sm text-black border">
-              Accessibility
-            </span>
-            <span className="px-3 py-1 bg-white/60 backdrop-blur-sm rounded-full text-sm text-black border">
-              Testing
-            </span>
-          </div>
-        </div>
+  useEffect(() => {
+    const onScroll = () => {
+      if (!sectionRef.current) return;
 
-        <div className="flex-shrink-0">
-          <div className="w-44 h-44 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-black shadow-lg">
-            <img
-              src="d2e7b8e6-73ea-441a-9925-8dfec28f3873.jpg"
-              alt="portrait"
-              className="w-full h-full object-cover"
-            />
-          </div>
+      const rect = sectionRef.current.getBoundingClientRect();
+      const vh = window.innerHeight;
+      const scrollable = sectionRef.current.offsetHeight - vh;
+
+      const scrolled = Math.min(Math.max(-rect.top, 0), scrollable);
+      const progress = scrolled / scrollable;
+
+      const count = Math.ceil(progress * 4);
+      setActiveCount(count);
+    };
+
+    window.addEventListener("scroll", onScroll);
+    onScroll();
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <section ref={sectionRef} className="relative h-[300vh] bg-[#fbf6ea]">
+      {/* Sticky viewport */}
+      <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
+        <h2 className="absolute top-8 left-12 text-3xl md:text-4xl font-bold text-black">
+          About
+        </h2>
+
+        <div className="relative w-full max-w-6xl h-[400px]">
+          {/* Card placements */}
+          <Card
+            index={0}
+            activeCount={activeCount}
+            className="left-0 top-0"
+            title="Who I Am"
+            description="A software engineer focused on creating fun, user-friendly experiences. I build interactive apps that bring ideas to life."
+          />
+          <Card
+            index={1}
+            activeCount={activeCount}
+            className="left-1/4 top-48"
+            title="What I Do"
+            description="I specialize in front-end development with React, JavaScript, and CSS. I craft seamless interfaces and smooth interactions."
+          />
+          <Card
+            index={2}
+            activeCount={activeCount}
+            className="left-1/2 top-0"
+            title="My Approach"
+            description="I believe in empathy and attention to detail. Every project starts with understanding user needs and crafting delightful solutions."
+          />
+          <Card
+            index={3}
+            activeCount={activeCount}
+            className="right-0 top-48"
+            title="Let's Connect"
+            description="I'm excited to collaborate on projects that value clarity, design, and real-world impact. Let's build something great."
+          />
         </div>
       </div>
     </section>
