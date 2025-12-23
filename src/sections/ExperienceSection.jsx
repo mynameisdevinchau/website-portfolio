@@ -1,72 +1,85 @@
 import { useRef, useEffect } from "react";
+
 function ExperienceSection() {
   const containerRef = useRef(null);
-  const horizontalRef = useRef(null);
+  const cardsRef = useRef([]);
 
-  {
-    /* This useEffect is for horizontal scrolling */
-  }
+  const experiences = [
+    { company: "Verzena", role: "Full Stack Engineer" },
+    { company: "Company B", role: "Role" },
+    { company: "Company C", role: "Role" },
+  ];
+
   useEffect(() => {
     const onScroll = () => {
-      if (!containerRef.current || !horizontalRef.current) return;
+      if (!containerRef.current) return;
 
       const container = containerRef.current;
-      const horizontal = horizontalRef.current;
-
       const rect = container.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
+
       const scrollableHeight = container.offsetHeight - viewportHeight;
-
       const scrolled = Math.min(Math.max(-rect.top, 0), scrollableHeight);
-
       const progress = scrolled / scrollableHeight;
 
-      const maxScroll = horizontal.scrollWidth - horizontal.clientWidth;
+      cardsRef.current.forEach((card, index) => {
+        if (!card) return;
 
-      horizontal.scrollLeft = progress * maxScroll;
+        const cardCount = experiences.length;
+        const start = index / cardCount;
+        const end = (index + 1) / cardCount;
+
+        let x = 100;
+        let opacity = 0;
+
+        if (progress >= start) {
+          const local = Math.min((progress - start) / (end - start), 1);
+          x = (1 - local) * 100;
+          opacity = local;
+        }
+
+        if (progress > end) {
+          x = 0;
+          opacity = 1;
+        }
+
+        const stackOffset = index * 120; // 120px offset shows a piece of each card
+
+        card.style.transform = `translateX(${x}%)`;
+        card.style.opacity = opacity.toString();
+        card.style.left = `${stackOffset}px`;
+        card.style.zIndex = (index + 1).toString();
+      });
     };
 
     window.addEventListener("scroll", onScroll);
     onScroll();
 
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [experiences.length]);
 
   return (
     <section
       ref={containerRef}
-      style={{ height: "300vh" }}
-      className="relative bg-blue-200 border-8"
+      className="relative h-[300vh] bg-gradient-to-b from-background to-muted"
     >
-      {/* The idea behind this is that I want to have the same fonts for the major points
-      and then for the answers, a different, sleek font */}
-      {/* This first section is for the text on the left
-        The second part of the flex-row will entail perhaps images
-        or perhaps display the text from the left flexbox */}
-      {/* Sticky pinned viewport */}
-      <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-        <div
-          ref={horizontalRef}
-          className="flex flex-row gap-24 px-12 overflow-hidden scrollbar-hide"
-        >
-          <div className="min-w-[100vw]">
-            <h1 className="text-4xl font-bold">Verzena *add logo*</h1>
-          </div>
-
-          <div className="min-w-[100vw]">
-            <h1 className="text-4xl font-bold">Intellitrainer?</h1>
-          </div>
-
-          <div className="min-w-[100vw]">
-            <h1 className="text-4xl font-bold">Experience on Data Glacier</h1>
-          </div>
-
-          <div className="min-w-[100vw] flex items-center justify-center">
-            <img
-              src="black.png"
-              className="w-80 h-80 rounded-xl object-cover"
-            />
-          </div>
+      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden px-8">
+        <div className="relative w-full h-full">
+          {experiences.map((exp, i) => (
+            <div
+              key={i}
+              ref={(el) => (cardsRef.current[i] = el)}
+              className="absolute w-[600px] h-full bg-card border border-border rounded-xl p-12 flex flex-col justify-center shadow-lg transition-all duration-300"
+              style={{
+                transformOrigin: "left center",
+              }}
+            >
+              <h2 className="text-4xl font-bold mb-2 text-foreground">
+                {exp.company}
+              </h2>
+              <p className="text-xl text-muted-foreground">{exp.role}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

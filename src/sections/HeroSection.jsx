@@ -1,25 +1,29 @@
+import "./HeroSection.css";
 function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-between gap-8 px-12 bg-blue-200 border-8">
-      {/* keeping color at bg-blue-200 border-8 to change to a grainy, beige background
-      border-8 used to seperate aesthetically*/}
-
-      {/* Left side will focus on dynamic text */}
+    <section className="min-h-screen flex items-center justify-between gap-8 px-12 bg-[#fbf6ea] border-8 border-blue-500">
       <div className="flex flex-col flex-[4]">
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-          Hello! I'm
+        <div className="slide-wrapper mb-4">
+          <h1 className="hello-slide text-4xl md:text-6xl font-bold text-black">
+            Hello! I&apos;m
+          </h1>
+        </div>
+        {/* Might be too extra to do the double slide */}
+        <h1 className="slide-wrapper text-4xl md:text-6xl text-black">
+          <p className="dynamic-slide text-4xl md:text-6xl text-black font-bold">
+            Devin
+          </p>
         </h1>
-        {/* This will be where the dynamic text will be. 
-        I also want to add a different font style*/}
-        <p className="text-4xl md:text-6xl font-bold text-white">Devin</p>
       </div>
-
       {/* Right side will be images. I don't know what it will be yet */}
-      <div className="flex flex-1 items-center justify-center">
-        <img
-          src="d2e7b8e6-73ea-441a-9925-8dfec28f3873.jpg"
-          // className="w-80 h-80 rounded-xl object-cover"
-        />
+      <div className="flex-shrink-0">
+        <div className="w-44 h-44 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-black shadow-lg">
+          <img
+            src="d2e7b8e6-73ea-441a-9925-8dfec28f3873.jpg"
+            alt="portrait"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
     </section>
   );
