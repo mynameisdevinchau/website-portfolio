@@ -6,8 +6,9 @@ import "./App.css";
 //imports for different sections
 import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
-import ExperienceSection from "./sections/ExperienceSection"
-import ProjectSection from "./sections/ProjectSection"
+import ExperienceSection from "./sections/ExperienceSection";
+import ProjectSection from "./sections/ProjectSection";
+import ContactSection from "./sections/ContactSection";
 
 function App() {
   /*
@@ -17,14 +18,14 @@ function App() {
 */
   return (
     <>
-        {/* <div className="min-h-screen bg-black text-white"> */}
+      {/* <div className="min-h-screen bg-black text-white"> */}
 
       <HeroSection></HeroSection>
       <AboutSection></AboutSection>
       <ExperienceSection></ExperienceSection>
       <ProjectSection></ProjectSection>
-          {/* </div> */}
-
+      <ContactSection></ContactSection>
+      {/* </div> */}
     </>
   );
 }
