@@ -22,7 +22,7 @@ function ProjectSection() {
   ];
 
   return (
-    <section className="min-h-screen bg-blue-200 border-8 px-12 py-20">
+    <section className="min-h-screen bg-[#fbf6ea] px-12 py-20">
       <h2 className="text-4xl font-bold mb-8">Projects</h2>
 
       {/* Grid */}

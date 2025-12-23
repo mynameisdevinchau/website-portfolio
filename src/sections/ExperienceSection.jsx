@@ -5,9 +5,9 @@ function ExperienceSection() {
   const cardsRef = useRef([]);
 
   const experiences = [
-    { company: "Verzena", role: "Full Stack Engineer" },
-    { company: "Company B", role: "Role" },
-    { company: "Company C", role: "Role" },
+    { company: "Verzena", role: "Full Stack Intern" },
+    { company: "Data Glacier", role: "Data Science Intern" },
+    { company: "ThinkNeuro", role: "Intern" },
   ];
 
   useEffect(() => {
@@ -61,15 +61,16 @@ function ExperienceSection() {
   return (
     <section
       ref={containerRef}
-      className="relative h-[300vh] bg-gradient-to-b from-background to-muted"
+      className="relative h-[300vh] bg-[#fbf6ea]"
     >
+      <div className = "text-8xl font-bold">Experience</div>
       <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden px-8">
         <div className="relative w-full h-full">
           {experiences.map((exp, i) => (
             <div
               key={i}
               ref={(el) => (cardsRef.current[i] = el)}
-              className="absolute w-[600px] h-full bg-card border border-border rounded-xl p-12 flex flex-col justify-center shadow-lg transition-all duration-300"
+              className="absolute w-[600px] h-full bg-card border border-border rounded-xl p-12 flex flex-col justify-center shadow-lg transition-all duration-300 bg-blue-200"
               style={{
                 transformOrigin: "left center",
               }}

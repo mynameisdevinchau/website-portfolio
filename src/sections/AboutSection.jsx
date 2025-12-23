@@ -50,7 +50,7 @@ function AboutSection() {
     <section ref={sectionRef} className="relative h-[300vh] bg-[#fbf6ea]">
       {/* Sticky viewport */}
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
-        <h2 className="absolute top-8 left-12 text-3xl md:text-4xl font-bold text-black">
+        <h2 className="absolute top-8 left-12 text-3xl md:text-8xl font-bold text-black">
           About
         </h2>
 
