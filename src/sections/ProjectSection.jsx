@@ -5,8 +5,8 @@ function ProjectSection() {
 
   const projects = [
     {
-      title: "Portfolio Website",
-      description: "A personal portfolio built with React and Tailwind.",
+      title: "PaperLink",
+      description: "Created in CalHacks 12.0, a group of 4 created this.",
       image: "/project1.jpg",
     },
     {
@@ -22,43 +22,12 @@ function ProjectSection() {
   ];
 
   return (
-    <section className="min-h-screen bg-[#fbf6ea] px-12 py-20">
-      <h2 className="text-4xl font-bold mb-8">Projects</h2>
+    <section className="min-h-screen bg-slate-900 px-12 py-20">
+      <h2 className="text-8xl font-bold mb-8">Projects</h2>
 
-      {/* Grid */}
-      <div className="grid grid-cols-2 gap-6">
-        {projects.map((project, i) => (
-          <button
-            key={i}
-            onClick={() => setActiveProject(project)}
-            className="group relative overflow-hidden border bg-white aspect-video"
-          >
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition"
-            />
-          </button>
-        ))}
-      </div>
 
-      {/* Modal */}
-      {activeProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
-          <div className="bg-white max-w-lg w-full p-6 relative">
-            <button
-              onClick={() => setActiveProject(null)}
-              className="absolute top-3 right-3 text-xl"
-            >
-              ✕
-            </button>
-
-            <h3 className="text-2xl font-bold mb-4">{activeProject.title}</h3>
-
-            <p>{activeProject.description}</p>
-          </div>
-        </div>
-      )}
+     
+        
     </section>
   );
 }

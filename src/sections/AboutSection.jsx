@@ -11,7 +11,7 @@ function Card({ index, activeCount, className, title, description, tags }) {
         ${className}
       `}
     >
-      <div className="w-60 h-100 bg-white rounded-lg shadow-lg p-6 border border-gray-400">
+      <div className="w-60 h-100 bg-[#fbf6ea] rounded-lg shadow-lg p-6 border border-gray-400">
         <h4 className="font-semibold text-lg text-black mb-2">{title}</h4>
         <p className="text-sm text-gray-600 mb-4 leading-relaxed">
           {description}
@@ -47,7 +47,7 @@ function AboutSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative h-[300vh] bg-[#fbf6ea]">
+    <section ref={sectionRef} className="relative h-[300vh] bg-slate-900">
       {/* Sticky viewport */}
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
         <h2 className="absolute top-8 left-12 text-3xl md:text-8xl font-bold text-black">

@@ -1,28 +1,39 @@
 import "./HeroSection.css";
+
 function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-between gap-8 px-12 bg-[#fbf6ea] border-8 border-blue-500">
-      <div className="flex flex-col flex-[4]">
-        <div className="slide-wrapper mb-4">
-          <h1 className="hello-slide text-4xl md:text-6xl font-bold text-black">
-            Hello! I&apos;m
-          </h1>
-        </div>
-        {/* Might be too extra to do the double slide */}
-        <h1 className="slide-wrapper text-4xl md:text-6xl text-black">
-          <p className="dynamic-slide text-4xl md:text-6xl text-black font-bold">
-            Devin
-          </p>
+    <section className="min-h-screen flex items-center justify-center px-12 bg-[#fbf6ea] border-8 border-blue-500">
+      <div className="text-center flex flex-col items-center gap-6">
+        {/* top intro */}
+        <h1 className="text-4xl md:text-6xl text-neutral-800 font-semibold tracking-tight">
+          Hello! I&apos;m
         </h1>
-      </div>
-      {/* Right side will be images. I don't know what it will be yet */}
-      <div className="flex-shrink-0">
-        <div className="w-44 h-44 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-black shadow-lg">
-          <img
-            src="d2e7b8e6-73ea-441a-9925-8dfec28f3873.jpg"
-            alt="portrait"
-            className="w-full h-full object-cover"
-          />
+
+        {/* going to make this dynamic*/}
+        <h2 className="hero-name-title text-[8rem] md:text-[12rem] font-extrabold leading-none uppercase">
+          Devin
+        </h2>
+
+        {/* i might change this lol*/}
+        <p className="text-xl md:text-2xl text-neutral-600 tracking-wide max-w-2xl">
+          Writer of clean, efficient, and effective code
+        </p>
+
+        {/* accent divider. i want to do something else with this line but i am not sure yet*/}
+        <div className="h-[3px] w-64 bg-black/80 mt-3 mb-2 rounded-full" />
+
+        {/* CTA row */}
+        <div className="flex gap-4 mt-4 flex-wrap justify-center">
+          <button
+            className="px-6 py-3 bg-black text-white font-semibold rounded-full text-lg transition hover:bg-neutral-800"
+          >
+            See My Work
+          </button>
+          <button
+            className="px-6 py-3 border-2 border-black text-black font-semibold rounded-full text-lg transition hover:bg-black hover:text-white"
+          >
+            Contact Me
+          </button>
         </div>
       </div>
     </section>
