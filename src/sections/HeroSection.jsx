@@ -2,7 +2,7 @@ import "./HeroSection.css";
 
 function HeroSection() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-12 bg-[#fbf6ea] border-8 border-blue-500">
+    <section className="min-h-screen flex items-center justify-center px-12 bg-[#fbf6ea]">
       <div className="text-center flex flex-col items-center gap-6">
         {/* top intro */}
         <h1 className="text-4xl md:text-6xl text-neutral-800 font-semibold tracking-tight">
@@ -24,14 +24,10 @@ function HeroSection() {
 
         {/* CTA row */}
         <div className="flex gap-4 mt-4 flex-wrap justify-center">
-          <button
-            className="px-6 py-3 bg-black text-white font-semibold rounded-full text-lg transition hover:bg-neutral-800"
-          >
+          <button className="px-6 py-3 bg-black text-white font-semibold rounded-full text-lg transition hover:bg-neutral-800">
             See My Work
           </button>
-          <button
-            className="px-6 py-3 border-2 border-black text-black font-semibold rounded-full text-lg transition hover:bg-black hover:text-white"
-          >
+          <button className="px-6 py-3 border-2 border-black text-black font-semibold rounded-full text-lg transition hover:bg-black hover:text-white">
             Contact Me
           </button>
         </div>

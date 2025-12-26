@@ -47,11 +47,13 @@ function AboutSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative h-[300vh] bg-slate-900">
+    <section ref={sectionRef} className="relative h-[300vh] bg-[#fbf6ea]">
       {/* Sticky viewport */}
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
-        <h2 className="absolute top-8 left-12 text-3xl md:text-8xl font-bold text-black">
-          About
+        <h2
+          className={`absolute top-8 left-1/2 -translate-x-1/2 text-3xl md:text-8xl font-bold`}
+        >
+          ABOUT
         </h2>
 
         <div className="relative w-full max-w-6xl h-[400px]">
