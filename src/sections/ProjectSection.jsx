@@ -48,6 +48,14 @@ function ProjectSection() {
       tagline: ".",
       details: ".",
     },
+    {
+      title: "Thatg one word game I want to make",
+      year: "2025",
+      role: "Game",
+      stack: "",
+      tagline: ".",
+      details: ".",
+    },
   ];
 
   const handleToggle = (index) => {

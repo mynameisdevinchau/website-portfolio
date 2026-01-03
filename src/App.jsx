@@ -1,10 +1,6 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import { useEffect } from "react";
 
-//imports for different sections
 import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
 import ExperienceSection from "./sections/ExperienceSection";
@@ -18,18 +14,16 @@ function App() {
 
     if (!bg || !projects) return;
 
-    const defaultColor = "#fbf6ea"; // original hero color
-    const projectsColor = "#000000"; // black when in view
+    const defaultColor = "#fbf6ea";
+    const projectsColor = "#000000";
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          bg.style.backgroundColor = projectsColor; // enter projects
-        } else {
-          bg.style.backgroundColor = defaultColor; // leave projects
-        }
+        bg.style.backgroundColor = entry.isIntersecting
+          ? projectsColor
+          : defaultColor;
       },
-      { threshold: 0.3 } // triggers when ~30% of the section is visible
+      { threshold: 0.3 }
     );
 
     observer.observe(projects);
@@ -37,20 +31,17 @@ function App() {
   }, []);
 
   return (
-    <>
-      {/* <div className="min-h-screen bg-black text-white"> */}
-      <div
-        id="dynamic-bg"
-        className="min-h-screen transition-colors duration-700"
-        style={{ backgroundColor: "#fbf6ea" }}
-      >
-        <HeroSection />
-        <AboutSection />
-        <ExperienceSection />
-        <ProjectSection />
-        <ContactSection />
-      </div>
-    </>
+    <div
+      id="dynamic-bg"
+      className="min-h-screen transition-colors duration-700"
+      style={{ backgroundColor: "#fbf6ea" }}
+    >
+      <HeroSection />
+      <AboutSection />
+      <ExperienceSection />
+      <ProjectSection />
+      <ContactSection />
+    </div>
   );
 }
 
