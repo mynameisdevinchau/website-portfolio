@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-function Card({ index, activeCount, className, title, description, tags }) {
+function Card({ index, activeCount, className, title, description }) {
   const isVisible = index < activeCount;
 
   return (
@@ -11,9 +11,9 @@ function Card({ index, activeCount, className, title, description, tags }) {
         ${className}
       `}
     >
-      <div className="w-60 h-100 bg-[#fbf6ea] rounded-lg shadow-lg p-6 border border-gray-400">
-        <h4 className="font-semibold text-lg text-black mb-2">{title}</h4>
-        <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+      <div className="group w-70 h-100 bg-background hover:bg-accent/5 rounded-xl border-2 border-border hover:border-primary/50 p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+        <h4 className="font-semibold text-lg text-foreground mb-3">{title}</h4>
+        <p className="text-sm text-muted-foreground leading-relaxed">
           {description}
         </p>
       </div>
@@ -33,11 +33,12 @@ function AboutSection() {
       const vh = window.innerHeight;
       const scrollable = sectionRef.current.offsetHeight - vh;
 
+      if (scrollable <= 0) return;
+
       const scrolled = Math.min(Math.max(-rect.top, 0), scrollable);
       const progress = scrolled / scrollable;
 
-      const count = Math.ceil(progress * 4);
-      setActiveCount(count);
+      setActiveCount(Math.ceil(progress * 4));
     };
 
     window.addEventListener("scroll", onScroll);
@@ -47,42 +48,41 @@ function AboutSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative h-[300vh] bg-[#fbf6ea]">
-      {/* Sticky viewport */}
-      <div className="sticky top-0 h-screen flex flex-col items-center justify-center">
-        <h2
-          className={`absolute top-8 left-1/2 -translate-x-1/2 text-3xl md:text-8xl font-bold`}
-        >
-          ABOUT
-        </h2>
+    <section ref={sectionRef} className="relative h-[300vh] bg-background">
+      <div className="sticky top-0 h-screen flex items-center justify-center">
+        <div className="absolute top-8 left-1/2 -translate-x-1/2 text-center">
+          <h2 className="text-6xl md:text-8xl font-bold tracking-tight">
+            ABOUT
+          </h2>
+          <div className="h-1.5 w-24 bg-primary rounded-full mx-auto mt-4" />
+        </div>
 
         <div className="relative w-full max-w-6xl h-[400px]">
-          {/* Card placements */}
           <Card
             index={0}
             activeCount={activeCount}
-            className="left-0 top-0"
+            className="left-[-10%] top-0"
             title="Who I Am"
             description="A software engineer focused on creating fun, user-friendly experiences. I build interactive apps that bring ideas to life."
           />
           <Card
             index={1}
             activeCount={activeCount}
-            className="left-1/4 top-48"
+            className="left-[20%] top-48"
             title="What I Do"
             description="I specialize in front-end development with React, JavaScript, and CSS. I craft seamless interfaces and smooth interactions."
           />
           <Card
             index={2}
             activeCount={activeCount}
-            className="left-1/2 top-0"
+            className="left-[50%] top-0"
             title="My Approach"
             description="I believe in empathy and attention to detail. Every project starts with understanding user needs and crafting delightful solutions."
           />
           <Card
             index={3}
             activeCount={activeCount}
-            className="right-0 top-48"
+            className="left-[80%] top-48"
             title="Let's Connect"
             description="I'm excited to collaborate on projects that value clarity, design, and real-world impact. Let's build something great."
           />

@@ -7,31 +7,46 @@ function ProjectSection() {
 
   const projects = [
     {
-      title: "Formy-AI",
-      year: "2024",
-      role: "UI/UX Design & Development",
-      stack: "Next.js, PostgreSQL, Clerk, Gemini API",
-      tagline: "Next-gen form builder leveraging AI.",
+      title: "Wildfire Severity Prediction",
+      year: "2025",
+      role: "Data Analysis, Modeling & Web Development",
+      stack: "Python, Dash, Google Cloud, Random Forest, XGBoost",
+      tagline:
+        "Interactive wildfire severity analytics and prediction platform.",
       details:
-        "Built an AI-assisted form builder that lets users generate complex multi-step forms from natural language. Integrated auth, role-based access, and analytics. Focused on clean UX with subtle animations.",
+        "Built a full-stack analytical dashboard that predicts wildfire severity in California using cleaned weather, wildfire, and census data. Engineered features and trained models (Random Forest & Stacking Regressor) for prediction. Developed dynamic visualizations for trend analysis and deployed the app on Google Cloud.",
+      repoUrl: "https://github.com/Sthearye/Wildfire-Severity-Website",
     },
-    {
-      title: "FileFlex",
-      year: "2024",
-      role: "UI/UX Design & Development",
-      stack: "Next.js, TypeScript, FFmpeg",
-      tagline: "Streamlined file processing dashboard.",
-      details:
-        "Dashboard for uploading, transcoding, and organizing media. Used FFmpeg for video processing with real-time status tracking, error catches, and job outputs.",
-    },
+
     {
       title: "PaperLink",
-      year: "2023",
-      role: "Full Stack / Hackathon Project",
-      stack: "React, Node.js, OpenAI API",
-      tagline: "Fast research summaries with TTS.",
+      year: "2025",
+      role: "Full-Stack Development & AI Integration",
+      stack: "Next.js 14, FastAPI, SQLite, Chroma, Claude LLM",
+      tagline:
+        "AI-powered research companion that summarizes and clusters academic papers.",
       details:
-        "Created at CalHacks with a team of four. Converts arXiv links into digestible summaries with optional TTS for accessibility. I built backend integration & reading view.",
+        "Built an AI-driven research digest tool that fetches the latest arXiv submissions based on a topic, clusters related papers using MiniLM embeddings stored in Chroma, and generates a concise weekly summary using Claude. Designed both a Next.js frontend and FastAPI backend with caching and optional text-to-speech support.",
+      repoUrl: "https://github.com/SShahparnia/paperlink",
+    },
+    {
+      title: "Event Management System",
+      year: "2024",
+      role: "Full-Stack Web Development",
+      stack: "Java Servlets, MySQL, Apache Tomcat, JDBC",
+      tagline:
+        "A role-based web platform for organizing events and managing ticket purchases.",
+      details:
+        "Built a full-stack event management web application that supports both event organizers and customers. Implemented user authentication, event creation and management, venue and performer listings, and ticket purchasing workflows. The system uses Java Servlets with JDBC for backend logic, a MySQL database for persistence, and is deployed on Apache Tomcat.",
+      repoUrl: "https://github.com/mynameisdevinchau/EventManagementSystem",
+    },
+    {
+      title: "Weirdle",
+      year: "2025",
+      role: "Game",
+      stack: "",
+      tagline: ".",
+      details: ".",
     },
   ];
 
