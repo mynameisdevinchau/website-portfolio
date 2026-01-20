@@ -75,7 +75,7 @@ function ExperienceSection() {
                     className={[
                       "h-2 w-2 rounded-full border",
                       isActive
-                        ? "bg-emerald-400 border-emerald-400"
+                        ? "bg-white"
                         : "bg-transparent border-neutral-400",
                     ].join(" ")}
                   />
