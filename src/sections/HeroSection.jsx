@@ -61,13 +61,14 @@ export default function HeroSection() {
           Writer of clean, efficient, and effective code
         </p>
 
-        {/* Line draws from left */}
-        <div className="relative h-[3px] w-64 mt-3 mb-2 rounded-full bg-black/20 overflow-hidden">
+        {/* Line draws from center outward */}
+        <div className="relative h-[3px] w-64 mt-3 mb-2 rounded-full overflow-hidden">
           <div
             className={[
-              "absolute inset-y-0 left-0 bg-black/80 rounded-full",
-              "transition-all duration-700 ease-out",
-              isLoaded ? "w-full" : "w-0",
+              "absolute inset-0 bg-black/80 rounded-full",
+              "transition-transform duration-700 ease-out",
+              isLoaded ? "scale-x-100" : "scale-x-0",
+              "origin-center",
             ].join(" ")}
             style={{ transitionDelay: "1300ms" }}
           />
