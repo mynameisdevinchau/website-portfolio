@@ -4,39 +4,42 @@ import { useEffect, useMemo, useRef, useState } from "react";
 const EXPERIENCES = [
   {
     company: "Verzena",
-    role: "Full Stack Intern",
-    period: "Jun 2024 – Sep 2024",
+    role: "Software Developer Intern",
+    period: "Jun 2025 – Present",
     location: "Remote",
     highlights: [
-      "Built internal dashboards with React + Node.js used by ops team daily.",
-      "Reduced API response time by ~30% by optimizing SQL queries and caching.",
-      "Collaborated with product to ship features on a 2-week sprint cadence.",
+      "Built and maintained internal dashboards using React + Node.js, supporting daily workflows for the operations team.",
+      "Improved backend performance by ~50% through SQL query optimization and strategic caching.",
+      "Collaborated on Figma prototypes to accelerate iteration and streamline the UI/UX design process.",
+      "Debugged, tested, and validated new features to ensure stable, high-quality releases.",
+      "Developed a PostgreSQL-backed messaging system to enable real-time user notifications and improve responsiveness.",
     ],
-    tech: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+    tech: ["React", "JavaScript", "Node.js", "PostgreSQL"],
   },
   {
     company: "Data Glacier",
     role: "Data Science Intern",
-    period: "Jan 2024 – Apr 2024",
+    period: "Oct 2024 – Feb 2025",
     location: "Remote",
     highlights: [
-      "Cleaned and analyzed large datasets to generate insights for clients.",
-      "Implemented regression and classification models with scikit-learn.",
-      "Presented findings through interactive dashboards and reports.",
+      "Cleaned and analyzed large datasets to generate insights for clients through visualizations.",
+      "Implemented regression and classification models with scikit-learn to provide to clients.",
+      "Presented findings through a meeting, using interactive dashboards and reports to display our findings.",
     ],
-    tech: ["Python", "Pandas", "scikit-learn", "Tableau"],
+    tech: ["Python", "Pandas", "scikit-learn"],
   },
   {
     company: "ThinkNeuro",
     role: "Intern",
-    period: "Sep 2023 – Dec 2023",
-    location: "San Jose, CA",
+    period: "Dec 2023 – Feb 2023",
+    location: "Remote",
     highlights: [
-      "Supported research on neuroimaging data preprocessing.",
-      "Automated repetitive analysis tasks with Python scripts.",
-      "Collaborated with grad students on literature reviews and figures.",
+      "Conducted bibliometric research on computational models of memory and learning, collaborating with a 10-person intern cohort to synthesize findings into a publishable research narrative",
+      "Cleaned, wrangled, and validated publication metadata (authors, journals, keywords, citations) from Web of Science to support reproducible analysis and reporting in R + Excel",
+      "Built data visualizations to communicate trends in research growth, high-impact authors, and keyword clusters, translating raw citation data into clear insights for a non-technical audience",
+      "Coordinated team workflow and peer feedback cycles to deliver a polished final presentation under deadline constraints",
     ],
-    tech: ["Python", "NumPy", "Matplotlib"],
+    tech: ["Python", "R", "Web of Science"],
   },
 ];
 
@@ -122,7 +125,7 @@ export default function ExperienceSection() {
                 className={cx(
                   "absolute inset-0 bg-black/80 rounded-full origin-center",
                   "transition-transform duration-700 ease-out",
-                  lineLoaded ? "scale-x-100" : "scale-x-0",
+                  lineLoaded ? "scale-x-35" : "scale-x-0",
                 )}
                 style={{ transitionDelay: "150ms" }}
               />
@@ -170,7 +173,7 @@ export default function ExperienceSection() {
                     className={cx(
                       "h-2 w-2 rounded-full border transition-colors",
                       isActive
-                        ? "bg-white border-white"
+                        ? "bg-blue-300 border-blue-300"
                         : "bg-transparent border-neutral-400",
                     )}
                   />

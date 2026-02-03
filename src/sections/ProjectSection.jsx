@@ -69,7 +69,7 @@ export default function ProjectSection() {
         title: "Wildfire Severity Prediction",
         year: "2025",
         role: "Data Analysis, Modeling & Web Development",
-        stack: "Python, Dash, Google Cloud, Random Forest, XGBoost",
+        stack: "Python, Dash, Google Cloud, Machine Learning",
         tagline:
           "Interactive wildfire severity analytics and prediction platform.",
         details:
@@ -99,13 +99,15 @@ export default function ProjectSection() {
         repoUrl: "https://github.com/mynameisdevinchau/EventManagementSystem",
       },
       {
-        title: "Weirdle",
-        year: "2025",
-        role: "Game",
-        stack: "",
-        tagline: "",
-        details: "",
-        repoUrl: "",
+        title: "Starbucks Analysis",
+        year: "2026",
+        role: "Data Analysis & Visualization",
+        stack: "Python, Pandas, Matplotlib, Seaborn",
+        tagline:
+          "Analyzed Starbucks customer behavior and sales data to identify trends and opportunities.",
+        details:
+          "Analyzed Starbucks customer data using Python libraries like Pandas and Matplotlib to uncover patterns in customer behavior and sales performance. Created visualizations to highlight key insights and supported strategic decision-making for product development and marketing campaigns.",
+        repoUrl: "https://github.com/mynameisdevinchau/starbucks-analysis",
       },
       {
         title: "That one word game I want to make",
@@ -158,7 +160,7 @@ export default function ProjectSection() {
                 "absolute inset-0 rounded-full origin-center",
                 inView ? "bg-white/90" : "bg-black/80",
                 "transition-transform duration-700 ease-out",
-                headerLoaded ? "scale-x-100" : "scale-x-0",
+                headerLoaded ? "scale-x-35" : "scale-x-0",
               )}
               style={{ transitionDelay: "150ms" }}
             />

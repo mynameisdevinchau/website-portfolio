@@ -67,7 +67,7 @@ export default function AboutSection() {
                 className={cx(
                   "absolute inset-0 bg-black/80 rounded-full origin-center",
                   "transition-transform duration-700 ease-out",
-                  lineLoaded ? "scale-x-100" : "scale-x-0",
+                  lineLoaded ? "scale-x-35" : "scale-x-0",
                 )}
                 style={{ transitionDelay: "150ms" }}
               />
@@ -85,7 +85,7 @@ export default function AboutSection() {
           >
             <div className="group relative h-full min-h-[400px] rounded-2xl overflow-hidden border border-black/10 bg-white">
               <img
-                src="71b826f3-108b-4d14-855c-cd395fc5e50c.jpg"
+                src="03f6ab3d-dc6a-4bb9-8e4d-a9b4eeb103e7.jpg"
                 alt="Portrait photo"
                 loading="lazy"
                 decoding="async"
@@ -114,9 +114,9 @@ export default function AboutSection() {
                 Who I Am
               </p>
               <p className="text-lg md:text-xl text-neutral-900 leading-relaxed">
-                A software engineer focused on creating fun, user-friendly
-                experiences. I build interactive apps that bring ideas to life,
-                blending creativity with clean, maintainable code.
+                A software engineer focused on creating great user experiences.
+                I build interactive apps that focuses on user needs with
+                efficiency and creativity.
               </p>
             </div>
           </div>
@@ -132,9 +132,11 @@ export default function AboutSection() {
                 What I Do
               </p>
               <p className="text-lg md:text-xl text-neutral-900 leading-relaxed">
-                I specialize in front-end development with React, JavaScript,
-                and CSS. I craft seamless interfaces and smooth interactions
-                that users love.
+                I specialize in back-end development with Python and Java, with
+                strong experience in SQL and MongoDB for data management. I also
+                enjoy building polished front-end experiences with React,
+                JavaScript, and CSS, focusing on seamless UI and intuitive
+                interactions.
               </p>
             </div>
           </div>
@@ -147,7 +149,7 @@ export default function AboutSection() {
           >
             <div className="group relative h-48 md:h-full min-h-[200px] rounded-2xl overflow-hidden border border-black/10 bg-white">
               <img
-                src="d80a5a16-1be3-4fc6-8310-fed51c1b2ff4 (1).jpg"
+                src="891bba7c-450e-4ebc-9e50-8aa7569f2554.jpg"
                 alt="Workspace setup"
                 loading="lazy"
                 decoding="async"
@@ -167,9 +169,8 @@ export default function AboutSection() {
                 My Approach
               </p>
               <p className="text-white leading-relaxed">
-                I believe in empathy and attention to detail. Every project
-                starts with understanding user needs and crafting delightful
-                solutions.
+                Every project starts with understanding user needs and crafting
+                solutions that are both efficient and effective.
               </p>
             </div>
           </div>
@@ -182,7 +183,7 @@ export default function AboutSection() {
           >
             <div className="group relative h-48 md:h-full min-h-[200px] rounded-2xl overflow-hidden border border-black/10 bg-white">
               <img
-                src="d80a5a16-1be3-4fc6-8310-fed51c1b2ff4 (1).jpg"
+                src="14a041eb-442c-4aa1-990c-426a0f0a20c4.jpg"
                 alt="Coding close-up"
                 loading="lazy"
                 decoding="async"
