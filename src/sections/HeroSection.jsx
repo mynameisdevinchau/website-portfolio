@@ -32,7 +32,7 @@ export default function HeroSection() {
             <span
               key={`${letter}-${index}`}
               className={[
-                "hero-letter", // CSS adds easing + delay handling
+                "hero-letter",
                 "text-[8rem] md:text-[12rem] font-extrabold leading-none text-neutral-900",
                 "transition-all duration-500",
                 isLoaded
@@ -40,8 +40,7 @@ export default function HeroSection() {
                   : "translate-y-16 opacity-0 rotate-12",
               ].join(" ")}
               style={{
-                // used only to pass numbers to CSS; actual delay calc happens in CSS
-                "--i": index,
+                "--i": index, // passes index to CSS for delay
               }}
             >
               {letter}
@@ -84,6 +83,11 @@ export default function HeroSection() {
             ].join(" ")}
             style={{ transitionDelay: "1500ms" }}
             type="button"
+            onClick={() => {
+              document
+                .getElementById("projects-section")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             See My Work
           </button>
@@ -96,6 +100,11 @@ export default function HeroSection() {
             ].join(" ")}
             style={{ transitionDelay: "1650ms" }}
             type="button"
+            onClick={() => {
+              document
+                .getElementById("contact-section")
+                ?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Contact Me
           </button>

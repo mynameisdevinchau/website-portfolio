@@ -92,7 +92,10 @@ export default function ContactSection() {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 md:px-12 py-20 bg-[#fbf6ea]">
+    <section
+      className="relative min-h-screen flex items-center justify-center px-6 md:px-12 py-20 bg-[#fbf6ea]"
+      id="contact-section"
+    >
       <div className="mx-auto w-full max-w-4xl">
         {/* Heading */}
         <div
