@@ -63,64 +63,52 @@ export default function ProjectSection() {
 
   const headerLoaded = armed && hIn;
 
-  const projects = useMemo(
-    () => [
-      {
-        title: "Wildfire Severity Prediction",
-        year: "2025",
-        role: "Data Analysis, Modeling & Web Development",
-        stack: "Python, Dash, Google Cloud, Machine Learning",
-        tagline:
-          "Interactive wildfire severity analytics and prediction platform.",
-        details:
-          "Built a full-stack analytical dashboard that predicts wildfire severity in California using cleaned weather, wildfire, and census data. Engineered features and trained models (Random Forest & Stacking Regressor) for prediction. Developed dynamic visualizations for trend analysis and deployed the app on Google Cloud.",
-        repoUrl: "https://github.com/Sthearye/Wildfire-Severity-Website",
-      },
-      {
-        title: "PaperLink",
-        year: "2025",
-        role: "Full-Stack Development & AI Integration",
-        stack: "Next.js 14, FastAPI, SQLite, Chroma, Claude LLM",
-        tagline:
-          "AI-powered research companion that summarizes and clusters academic papers.",
-        details:
-          "Built an AI-driven research digest tool that fetches the latest arXiv submissions based on a topic, clusters related papers using MiniLM embeddings stored in Chroma, and generates a concise weekly summary using Claude. Designed both a Next.js frontend and FastAPI backend with caching and optional text-to-speech support.",
-        repoUrl: "https://github.com/SShahparnia/paperlink",
-      },
-      {
-        title: "Event Management System",
-        year: "2024",
-        role: "Full-Stack Web Development",
-        stack: "Java Servlets, MySQL, Apache Tomcat, JDBC",
-        tagline:
-          "A role-based web platform for organizing events and managing ticket purchases.",
-        details:
-          "Built a full-stack event management web application that supports both event organizers and customers. Implemented user authentication, event creation and management, venue and performer listings, and ticket purchasing workflows. The system uses Java Servlets with JDBC for backend logic, a MySQL database for persistence, and is deployed on Apache Tomcat.",
-        repoUrl: "https://github.com/mynameisdevinchau/EventManagementSystem",
-      },
-      {
-        title: "Starbucks Analysis",
-        year: "2026",
-        role: "Data Analysis & Visualization",
-        stack: "Python, Pandas, Matplotlib, Seaborn",
-        tagline:
-          "Analyzed Starbucks customer behavior and sales data to identify trends and opportunities.",
-        details:
-          "Analyzed Starbucks customer data using Python libraries like Pandas and Matplotlib to uncover patterns in customer behavior and sales performance. Created visualizations to highlight key insights and supported strategic decision-making for product development and marketing campaigns.",
-        repoUrl: "https://github.com/mynameisdevinchau/starbucks-analysis",
-      },
-      {
-        title: "That one word game I want to make",
-        year: "2025",
-        role: "Game",
-        stack: "",
-        tagline: "",
-        details: "",
-        repoUrl: "",
-      },
-    ],
-    [],
-  );
+  const projects = useMemo(() => [
+    {
+      title: "Wildfire Severity Prediction",
+      year: "2025",
+      role: "Data Analysis, Modeling & Web Development",
+      stack: "Python, Dash, Google Cloud, Machine Learning",
+      tagline:
+        "Interactive wildfire severity analytics and prediction platform.",
+      details:
+        "Built a full-stack analytical dashboard that predicts wildfire severity in California using cleaned weather, wildfire, and census data. Engineered features and trained models (Random Forest & Stacking Regressor) for prediction. Developed dynamic visualizations for trend analysis and deployed the app on Google Cloud.",
+      repoUrl: "https://github.com/Sthearye/Wildfire-Severity-Website",
+    },
+    {
+      title: "PaperLink",
+      year: "2025",
+      role: "Full-Stack Development & AI Integration",
+      stack: "Next.js 14, FastAPI, SQLite, Chroma, Claude LLM",
+      tagline:
+        "AI-powered research companion that summarizes and clusters academic papers.",
+      details:
+        "Built an AI-driven research digest tool that fetches the latest arXiv submissions based on a topic, clusters related papers using MiniLM embeddings stored in Chroma, and generates a concise weekly summary using Claude. Designed both a Next.js frontend and FastAPI backend with caching and optional text-to-speech support.",
+      repoUrl: "https://github.com/SShahparnia/paperlink",
+    },
+    {
+      title: "Event Management System",
+      year: "2024",
+      role: "Full-Stack Web Development",
+      stack: "Java Servlets, MySQL, Apache Tomcat, JDBC",
+      tagline:
+        "A role-based web platform for organizing events and managing ticket purchases.",
+      details:
+        "Built a full-stack event management web application that supports both event organizers and customers. Implemented user authentication, event creation and management, venue and performer listings, and ticket purchasing workflows. The system uses Java Servlets with JDBC for backend logic, a MySQL database for persistence, and is deployed on Apache Tomcat.",
+      repoUrl: "https://github.com/mynameisdevinchau/EventManagementSystem",
+    },
+    {
+      title: "Starbucks Analysis",
+      year: "2026",
+      role: "Data Analysis & Visualization",
+      stack: "Python, Pandas, Matplotlib, Seaborn",
+      tagline:
+        "Analyzed Starbucks customer behavior and sales data to identify trends and opportunities.",
+      details:
+        "Analyzed Starbucks customer data using Python libraries like Pandas and Matplotlib to uncover patterns in customer behavior and sales performance. Created visualizations to highlight key insights and supported strategic decision-making for product development and marketing campaigns.",
+      repoUrl: "https://github.com/mynameisdevinchau/starbucks-analysis",
+    },
+  ]);
 
   const handleToggle = (index) => {
     setOpenIndex((prev) => (prev === index ? null : index));

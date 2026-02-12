@@ -85,7 +85,7 @@ export default function AboutSection() {
           >
             <div className="group relative h-full min-h-[400px] rounded-2xl overflow-hidden border border-black/10 bg-white">
               <img
-                src="03f6ab3d-dc6a-4bb9-8e4d-a9b4eeb103e7.jpg"
+                src="9bf82337-e58d-4c03-8d4b-975f03f80571.jpg"
                 alt="Portrait photo"
                 loading="lazy"
                 decoding="async"
