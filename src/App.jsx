@@ -1,6 +1,6 @@
+//imports
 import "./App.css";
 import { useEffect } from "react";
-
 import HeroSection from "./sections/HeroSection";
 import AboutSection from "./sections/AboutSection";
 import ExperienceSection from "./sections/ExperienceSection";
@@ -23,7 +23,7 @@ function App() {
           ? projectsColor
           : defaultColor;
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     );
 
     observer.observe(projects);
