@@ -1,15 +1,23 @@
-import './App.css';
-import portrait from './assets/devin-portrait.jpg';
-import ExperienceItem from './components/ExperienceItem';
-import { ArrowUpRightIcon, GithubIcon, LinkedinIcon, MailIcon, SparkIcon } from './components/Icons';
-import ProjectCard from './components/ProjectCard';
-import SectionTitle from './components/SectionTitle';
-import { experience, profile, projects } from './data/portfolioData';
+import "./App.css";
+import portrait from "./assets/devin-portrait.jpg";
+import ExperienceItem from "./components/ExperienceItem";
+import {
+  ArrowUpRightIcon,
+  GithubIcon,
+  LinkedinIcon,
+  MailIcon,
+  SparkIcon,
+} from "./components/Icons";
+import ProjectCard from "./components/ProjectCard";
+import SectionTitle from "./components/SectionTitle";
+import { experience, profile, projects } from "./data/portfolioData";
 
 function StatCard({ label, value }) {
   return (
     <div className="rounded-3xl border border-neutral-200 bg-white px-5 py-4 shadow-[0_10px_35px_rgba(15,23,42,0.04)]">
-      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">{label}</p>
+      <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">
+        {label}
+      </p>
       <p className="mt-2 text-lg font-semibold text-neutral-950">{value}</p>
     </div>
   );
@@ -19,8 +27,8 @@ function SocialLink({ href, label, icon }) {
   return (
     <a
       href={href}
-      target={href.startsWith('mailto:') ? undefined : '_blank'}
-      rel={href.startsWith('mailto:') ? undefined : 'noreferrer'}
+      target={href.startsWith("mailto:") ? undefined : "_blank"}
+      rel={href.startsWith("mailto:") ? undefined : "noreferrer"}
       className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-neutral-300 bg-white text-neutral-700 transition hover:-translate-y-0.5 hover:border-neutral-950 hover:bg-neutral-950 hover:text-white"
       aria-label={label}
     >
@@ -37,7 +45,10 @@ function App() {
 
       <header className="sticky top-0 z-30 border-b border-black/5 bg-[#f7f3ea]/85 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-          <a href="#top" className="text-sm font-semibold uppercase tracking-[0.28em] text-neutral-900">
+          <a
+            href="#top"
+            className="text-sm font-semibold uppercase tracking-[0.28em] text-neutral-900"
+          >
             {profile.name}
           </a>
 
@@ -55,7 +66,10 @@ function App() {
         </div>
       </header>
 
-      <main id="top" className="mx-auto max-w-7xl px-6 pb-16 pt-8 lg:px-10 lg:pt-12">
+      <main
+        id="top"
+        className="mx-auto max-w-7xl px-6 pb-16 pt-8 lg:px-10 lg:pt-12"
+      >
         <section className="grid gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(340px,0.8fr)] lg:items-start">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white/80 px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-neutral-600 shadow-sm">
@@ -68,7 +82,8 @@ function App() {
                 {profile.title}
               </p>
               <h1 className="max-w-4xl text-5xl font-semibold tracking-tight text-neutral-950 sm:text-6xl lg:text-7xl">
-                Building products that feel polished, useful, and technically sound.
+                Building products that feel polished, useful, and technically
+                sound.
               </h1>
               <p className="max-w-3xl text-base leading-8 text-neutral-600 sm:text-lg">
                 {profile.intro}
@@ -96,14 +111,32 @@ function App() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <SocialLink href={profile.links.github} label="GitHub" icon={<GithubIcon />} />
-              <SocialLink href={profile.links.linkedin} label="LinkedIn" icon={<LinkedinIcon />} />
-              <SocialLink href={profile.links.email} label="Email" icon={<MailIcon />} />
+              <SocialLink
+                href={profile.links.github}
+                label="GitHub"
+                icon={<GithubIcon />}
+              />
+              <SocialLink
+                href={profile.links.linkedin}
+                label="LinkedIn"
+                icon={<LinkedinIcon />}
+              />
+              <SocialLink
+                href={profile.links.email}
+                label="Email"
+                icon={<MailIcon />}
+              />
             </div>
 
             <div className="grid gap-4 sm:grid-cols-3">
-              <StatCard label="Current focus" value="Full-stack + data tooling" />
-              <StatCard label="Experience" value="3 roles across software, ML, and research" />
+              <StatCard
+                label="Current focus"
+                value="Full-stack + data tooling"
+              />
+              <StatCard
+                label="Experience"
+                value="3 roles across software, ML, and research"
+              />
               <StatCard label="Core stack" value="Python, React, SQL, AWS" />
             </div>
           </div>
@@ -119,8 +152,12 @@ function App() {
 
             <div className="mt-5 space-y-5">
               <div>
-                <p className="text-2xl font-semibold text-neutral-950">{profile.name}</p>
-                <p className="mt-1 text-sm text-neutral-600">{profile.title} · {profile.location}</p>
+                <p className="text-2xl font-semibold text-neutral-950">
+                  {profile.name}
+                </p>
+                <p className="mt-1 text-sm text-neutral-600">
+                  {profile.title} · {profile.location}
+                </p>
               </div>
 
               <div className="flex flex-wrap gap-2">
@@ -163,16 +200,25 @@ function App() {
 
             <div className="grid gap-4">
               <div className="rounded-[28px] border border-neutral-200 bg-white p-6 shadow-[0_12px_40px_rgba(15,23,42,0.05)]">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500">What I bring</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-neutral-500">
+                  What I bring
+                </p>
                 <p className="mt-3 text-sm leading-7 text-neutral-600 sm:text-[15px]">
-                  I like projects that require both technical depth and judgment. That usually means building the backend carefully, keeping the frontend clear, and using data or modeling only when it makes the product stronger.
+                  I like projects that require both technical depth and
+                  judgment. That usually means building the backend carefully,
+                  keeping the frontend clear, and using data or modeling only
+                  when it makes the product stronger.
                 </p>
               </div>
 
               <div className="rounded-[28px] border border-neutral-200 bg-neutral-950 p-6 text-white shadow-[0_12px_40px_rgba(15,23,42,0.1)]">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">How I work</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60">
+                  How I work
+                </p>
                 <p className="mt-3 text-sm leading-7 text-white/80 sm:text-[15px]">
-                  I care about clean interfaces, maintainable code, and systems that solve real workflow problems. The goal is not just to make something impressive, but to make it dependable.
+                  I care about clean interfaces, maintainable code, and systems
+                  that solve real workflow problems. The goal is not just to
+                  make something impressive, but to make it dependable.
                 </p>
               </div>
             </div>
@@ -187,7 +233,10 @@ function App() {
 
             <div className="relative space-y-5 border-l border-neutral-300 pl-6">
               {experience.map((item) => (
-                <ExperienceItem key={`${item.company}-${item.role}`} item={item} />
+                <ExperienceItem
+                  key={`${item.company}-${item.role}`}
+                  item={item}
+                />
               ))}
             </div>
           </div>
@@ -211,12 +260,16 @@ function App() {
           <div className="rounded-[36px] border border-neutral-200 bg-neutral-950 px-6 py-8 text-white shadow-[0_28px_90px_rgba(15,23,42,0.16)] sm:px-8 sm:py-10">
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
               <div className="space-y-4">
-                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/55">Contact</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-white/55">
+                  Contact
+                </p>
                 <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl">
                   Interested in working together or just want to connect?
                 </h2>
                 <p className="max-w-2xl text-sm leading-7 text-white/75 sm:text-base">
-                  I’m always open to conversations about software engineering, data products, and projects where thoughtful execution matters as much as the idea itself.
+                  I’m always open to conversations about software engineering,
+                  data products, and projects where thoughtful execution matters
+                  as much as the idea itself.
                 </p>
               </div>
 

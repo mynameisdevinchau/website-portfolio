@@ -1,4 +1,4 @@
-import { ArrowUpRightIcon, GithubIcon } from './Icons';
+import { ArrowUpRightIcon, GithubIcon } from "./Icons";
 
 export default function ProjectCard({ project }) {
   return (
