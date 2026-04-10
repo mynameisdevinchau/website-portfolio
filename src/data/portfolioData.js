@@ -4,7 +4,7 @@ export const profile = {
   location: "California",
   email: "chau.devin031602@gmail.com",
   intro:
-    "I build full-stack products, data tools, and ML-backed workflows with a strong focus on clarity, performance, and user experience.",
+    "My work spans software engineering, analytics, and product design. I am most interested in taking something complex or messy and shaping it into something dependable, clear, and easy to use.",
   summary:
     "My work sits at the intersection of software engineering, analytics, and product thinking. I enjoy turning messy processes into reliable systems, then shaping them into interfaces people actually want to use.",
   links: {
@@ -12,7 +12,7 @@ export const profile = {
     linkedin: "https://linkedin.com/in/devin-chau-66b5b2208",
     email: "mailto:chau.devin031602@gmail.com",
   },
-  focusAreas: ["Full-Stack Apps", "Data Products", "ML Workflows"],
+  focusAreas: ["Software Engineering", "Data Tools", "Applied ML"],
   techStack: [
     "Python",
     "JavaScript",
@@ -85,6 +85,7 @@ export const projects = [
       "Deployed the model on AWS EC2 through Flask with Docker-based serving across 3 servers.",
       "Built preprocessing workflows that converted 1,000+ messages to JSONL while filtering sensitive information.",
     ],
+    categories: ["swe", "ds"],
   },
   {
     title: "Starbucks Marketing Funnel Analysis",
@@ -97,6 +98,7 @@ export const projects = [
       "Identified the biggest drop-off points and surfaced stronger retention from BOGO-style offers.",
       "Turned raw behavioral data into business-facing visuals and takeaways for marketing strategy.",
     ],
+    categories: ["da", "ds"],
   },
   {
     title: "Wildfire Severity Prediction",
@@ -109,6 +111,7 @@ export const projects = [
       "Engineered predictive features and trained models such as Random Forest and stacking-based approaches.",
       "Built dynamic visualizations for geographic and temporal trend analysis and deployed the app to the cloud.",
     ],
+    categories: ["ds", "da"],
   },
   {
     title: "Event Management System",
@@ -121,5 +124,19 @@ export const projects = [
       "Built backend logic with Java Servlets and JDBC on top of a MySQL persistence layer.",
       "Designed the product around end-to-end workflows instead of isolated feature demos.",
     ],
+    categories: ["swe"],
+  },
+  {
+    title: "Weather and Energy Demand Pipeline",
+    repoUrl: "https://github.com/mynameisdevinchau/weather-energy-pipeline",
+    stack: ["Python", "AWS Lambda", "S3", "Glue", "Athena", "PySpark", "SQL"],
+    summary:
+      "An end-to-end AWS pipeline that ingests weather and electricity demand data, transforms it into curated datasets, and makes it queryable for downstream analysis.",
+    bullets: [
+      "Built an EventBridge-triggered Lambda workflow to pull daily data from Open-Meteo and EIA APIs into partitioned S3 storage.",
+      "Used AWS Glue and PySpark to parse multiline JSON, enforce types, join data by city and date, and write curated Parquet datasets.",
+      "Modeled the project like a production-style pipeline with cloud storage layers and Athena-ready query workflows.",
+    ],
+    categories: ["de", "da"],
   },
 ];
