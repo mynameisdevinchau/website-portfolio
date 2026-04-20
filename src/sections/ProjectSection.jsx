@@ -97,18 +97,6 @@ export default function ProjectSection() {
         repoUrl: "https://github.com/mynameisdevinchau/weather-energy-pipeline",
         categories: ["de", "da"],
       },
-      {
-        title: "AI Discord Bot",
-        year: "2025",
-        role: "ML Application Development",
-        stack: "Python, Meta-Llama, AWS EC2, Flask, Discord API",
-        tagline:
-          "Fine-tuned conversational bot deployed as a real-time Discord application.",
-        details:
-          "Fine-tuned TinyLlama 1.1B on 40k+ Discord messages to replicate a user-specific conversation style. Deployed the model on AWS EC2 through Flask with Docker-based serving across multiple servers, and built preprocessing workflows to convert raw messages into clean JSONL training data.",
-        repoUrl: "https://github.com/rohankhatri7/rohanbot",
-        categories: ["swe", "ds"],
-      },
     ],
     [],
   );

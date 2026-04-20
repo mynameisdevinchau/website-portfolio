@@ -1,6 +1,6 @@
 export const profile = {
   name: "Devin Chau",
-  title: "Software Engineer",
+  title: "Data Scientist",
   location: "California",
   email: "chau.devin031602@gmail.com",
   intro:
@@ -75,19 +75,6 @@ export const experience = [
 
 export const projects = [
   {
-    title: "AI Discord Bot",
-    repoUrl: "https://github.com/rohankhatri7/rohanbot",
-    stack: ["Python", "Meta-Llama", "AWS EC2", "Flask", "Discord API"],
-    summary:
-      "A personality-driven Discord bot that fine-tunes a small language model on community messages and serves responses through a production-style deployment setup.",
-    bullets: [
-      "Fine-tuned TinyLlama 1.1B on 40k+ Discord messages to replicate a user-specific conversation style.",
-      "Deployed the model on AWS EC2 through Flask with Docker-based serving across 3 servers.",
-      "Built preprocessing workflows that converted 1,000+ messages to JSONL while filtering sensitive information.",
-    ],
-    categories: ["swe", "ds"],
-  },
-  {
     title: "Starbucks Marketing Funnel Analysis",
     repoUrl: "https://github.com/mynameisdevinchau/starbucks-analysis",
     stack: ["Python", "Pandas", "Matplotlib", "Seaborn"],
@@ -138,5 +125,32 @@ export const projects = [
       "Modeled the project like a production-style pipeline with cloud storage layers and Athena-ready query workflows.",
     ],
     categories: ["de", "da"],
+  },
+  {
+    title: "PaperLink",
+    repoUrl: "https://github.com/SShahparnia/paperlink",
+    stack: ["Python", "Claude", "FastAPI", "Lava", "Fish Audio"],
+    summary:
+      "A Runner-up CalHacks project that generates concise research digests from arXiv papers in under 1 minute, with a Next.js UI and audio-first accessibility features.",
+    bullets: [
+      "Built a CalHacks AI research companion that generates arXiv digests in under 1 minute (MiniLM embeddings, Chroma clustering, Claude summaries via Lava).",
+      "Developed a Next.js 14 UI with Browse/Digest modes and daily/weekly/monthly briefings per topic",
+      "Added sentence-level text-to-speech playback with Fish Audio to improve accessibility for audio-first users.",
+    ],
+    categories: ["swe"],
+  },
+  {
+    title: "Death Penalty Status Analysis",
+    repoUrl:
+      "https://github.com/mynameisdevinchau/Death-Penalty-Status-Analysis-",
+    stack: ["R"],
+    summary:
+      "An analysis of death penalty status across US states, exploring geographic and temporal trends in capital punishment.",
+    bullets: [
+      "Manipulated, cleaned, and processed data to examine the correlation between death penalty status and crime rates in the U.S",
+      "Created visualizations using RStudio to present trends and insights for data-driven decision-making.",
+      "Enhanced the understanding of the relationship between the death penalty and crime rates, providing nuanced insights into its implications and potential approaches for addressing crime in America.",
+    ],
+    categories: ["da"],
   },
 ];
