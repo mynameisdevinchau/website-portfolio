@@ -58,16 +58,13 @@ function App() {
 
       <header className="relative z-30 sticky top-0 border-b border-black/5 bg-[#f7f3ea]/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-[1500px] items-center justify-between px-8 py-4 xl:px-12">
-          <a
-            href="#top"
-            className="text-sm font-semibold uppercase tracking-[0.28em] text-neutral-950"
-          >
+          <a className="text-sm font-semibold uppercase tracking-[0.28em] text-neutral-950">
             {profile.name}
           </a>
 
           <nav className="hidden items-center gap-8 text-sm text-neutral-700 md:flex">
             <a
-              href="/resume.pdf"
+              href="/Devin_Chau_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-neutral-950"
