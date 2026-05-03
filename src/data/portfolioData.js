@@ -153,4 +153,17 @@ export const projects = [
     ],
     categories: ["da"],
   },
+  {
+  title: "Clinic No-Show Analysis",
+  repoUrl: "https://github.com/mynameisdevinchau/clinic-no-show-analysis",
+  stack: ["Python", "Pandas", "NumPy", "SQLite", "SciPy", "statsmodels", "Tableau"],
+  summary:
+    "An analysis of 110,522 medical appointments to identify factors associated with patient no-shows and uncover operational patterns that could improve clinic scheduling and outreach.",
+  bullets: [
+    "Analyzed 110,522 medical appointments using Python, SQL, and statistical modeling to identify drivers of patient no-show behavior across scheduling, demographic, and patient-level factors.",
+    "Found scheduling delay to be the strongest predictor of missed appointments, with no-show rates rising from 4.65% for same-day visits to 33.16% for appointments scheduled 31 to 90 days out.",
+    "Used chi-square tests, two-proportion tests, and logistic regression to show that crude SMS reminder comparisons were confounded by scheduling delay, while adjusted models suggested reminders were associated with lower no-show odds.",
+  ],
+  categories: ["ds", "da"]
+},
 ];
