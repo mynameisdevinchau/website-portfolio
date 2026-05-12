@@ -85,18 +85,18 @@ export default function ProjectSection() {
         repoUrl: "https://github.com/mynameisdevinchau/starbucks-analysis",
         categories: ["da"],
       },
-      {
-        title: "Weather and Energy Demand Pipeline",
-        year: "2025",
-        role: "Data Engineering & Cloud Pipeline Development",
-        stack: "Python, AWS Lambda, S3, Glue, Athena, PySpark, SQL",
-        tagline:
-          "End-to-end AWS pipeline for weather and electricity demand data.",
-        details:
-          "Built an EventBridge-triggered AWS Lambda workflow to ingest weather and energy demand data from public APIs into partitioned S3 storage. Used AWS Glue and PySpark to clean, transform, and join datasets, then wrote curated Parquet outputs for Athena-based querying and downstream analysis.",
-        repoUrl: "https://github.com/mynameisdevinchau/weather-energy-pipeline",
-        categories: ["de", "da"],
-      },
+     {
+  title: "Clinic No-Show Analysis",
+  year: "2025",
+  role: "Data Science & Healthcare Analytics",
+  stack: "Python, Pandas, NumPy, SQLite, SciPy, statsmodels, Tableau",
+  tagline:
+    "Statistical analysis of patient no-show behavior across 110,522 medical appointments.",
+  details:
+    "Analyzed 110,522 medical appointments to identify factors associated with patient no-shows, including scheduling delay, age, scholarship status, SMS reminders, and neighborhood-level patterns. Used SQL, chi-square tests, two-proportion tests, and logistic regression to show that longer scheduling delays were the strongest predictor of missed appointments, with no-show rates increasing from 4.65% for same-day visits to 33.16% for appointments scheduled 31 to 90 days out. Found that raw SMS reminder comparisons were confounded by scheduling delay, while adjusted models suggested reminders were associated with lower no-show odds.",
+  repoUrl: "https://github.com/mynameisdevinchau/clinic-no-show-analysis",
+  categories: ["ds", "da"],
+},
     ],
     [],
   );
