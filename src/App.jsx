@@ -64,7 +64,7 @@ function App() {
 
           <nav className="hidden items-center gap-8 text-sm text-neutral-700 md:flex">
             <a
-              href="../Devin_Chau_Resume.pdf"
+              href="../public/Devin_Chau_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="transition hover:text-neutral-950"
