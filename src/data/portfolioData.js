@@ -88,16 +88,16 @@ export const projects = [
     categories: ["da", "ds"],
   },
   {
-    title: "Wildfire Severity Prediction",
-    repoUrl: "https://github.com/Sthearye/Wildfire-Severity-Website",
-    stack: ["Python", "Dash", "Machine Learning", "Google Cloud"],
-    summary:
-      "Interactive analytics and prediction platform for exploring wildfire severity patterns across California.",
-    bullets: [
-      "Combined wildfire, weather, and census data into a modeling and dashboard workflow.",
-      "Engineered predictive features and trained models such as Random Forest and stacking-based approaches.",
-      "Built dynamic visualizations for geographic and temporal trend analysis and deployed the app to the cloud.",
-    ],
+    title: "California Wildfire Severity Prediction",
+    year: "2025",
+    role: "Geospatial Data Science & Machine Learning",
+    stack:
+      "Python, pandas, GeoPandas, rasterio, pygridMET, py3DEP, xarray, scikit-learn, XGBoost",
+    tagline:
+      "Point-based geospatial machine learning pipeline for wildfire severity triage.",
+    details:
+      "Built a geospatial machine learning pipeline to model California wildfire severity using pre-fire weather, terrain, drought, and vegetation/fuel conditions. Cleaned and enriched 2,397 CAL FIRE incident records with gridMET fire-weather variables, USGS 3DEP terrain features, U.S. Drought Monitor intensity, and LANDFIRE fuel layers. Evaluated multiclass severity prediction and binary high-severity triage models with time-based validation, imbalance-aware metrics, and threshold tuning.",
+    repoUrl: "https://github.com/mynameisdevinchau/wildfire-severity-v2",
     categories: ["ds", "da"],
   },
   {
@@ -154,16 +154,24 @@ export const projects = [
     categories: ["da"],
   },
   {
-  title: "Clinic No-Show Analysis",
-  repoUrl: "https://github.com/mynameisdevinchau/clinic-no-show-analysis",
-  stack: ["Python", "Pandas", "NumPy", "SQLite", "SciPy", "statsmodels", "Tableau"],
-  summary:
-    "An analysis of 110,522 medical appointments to identify factors associated with patient no-shows and uncover operational patterns that could improve clinic scheduling and outreach.",
-  bullets: [
-    "Analyzed 110,522 medical appointments using Python, SQL, and statistical modeling to identify drivers of patient no-show behavior across scheduling, demographic, and patient-level factors.",
-    "Found scheduling delay to be the strongest predictor of missed appointments, with no-show rates rising from 4.65% for same-day visits to 33.16% for appointments scheduled 31 to 90 days out.",
-    "Used chi-square tests, two-proportion tests, and logistic regression to show that crude SMS reminder comparisons were confounded by scheduling delay, while adjusted models suggested reminders were associated with lower no-show odds.",
-  ],
-  categories: ["ds", "da"]
-},
+    title: "Clinic No-Show Analysis",
+    repoUrl: "https://github.com/mynameisdevinchau/clinic-no-show-analysis",
+    stack: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "SQLite",
+      "SciPy",
+      "statsmodels",
+      "Tableau",
+    ],
+    summary:
+      "An analysis of 110,522 medical appointments to identify factors associated with patient no-shows and uncover operational patterns that could improve clinic scheduling and outreach.",
+    bullets: [
+      "Analyzed 110,522 medical appointments using Python, SQL, and statistical modeling to identify drivers of patient no-show behavior across scheduling, demographic, and patient-level factors.",
+      "Found scheduling delay to be the strongest predictor of missed appointments, with no-show rates rising from 4.65% for same-day visits to 33.16% for appointments scheduled 31 to 90 days out.",
+      "Used chi-square tests, two-proportion tests, and logistic regression to show that crude SMS reminder comparisons were confounded by scheduling delay, while adjusted models suggested reminders were associated with lower no-show odds.",
+    ],
+    categories: ["ds", "da"],
+  },
 ];

@@ -38,15 +38,16 @@ export default function ProjectSection() {
   const projects = useMemo(
     () => [
       {
-        title: "Wildfire Severity Prediction",
+        title: "California Wildfire Severity Prediction",
         year: "2025",
-        role: "Data Analysis, Modeling & Web Development",
-        stack: "Python, Dash, Google Cloud, Machine Learning",
+        role: "Geospatial Data Science & Machine Learning",
+        stack:
+          "Python, pandas, GeoPandas, rasterio, pygridMET, py3DEP, xarray, scikit-learn, XGBoost",
         tagline:
-          "Interactive wildfire severity analytics and prediction platform.",
+          "Point-based geospatial machine learning pipeline for wildfire severity triage.",
         details:
-          "Built a full-stack analytical dashboard that predicts wildfire severity in California using cleaned weather, wildfire, and census data. Engineered features and trained models such as Random Forest and Stacking Regressor for prediction. Developed dynamic visualizations for trend analysis and deployed the app on Google Cloud.",
-        repoUrl: "https://github.com/Sthearye/Wildfire-Severity-Website",
+          "Built a geospatial machine learning pipeline to model California wildfire severity using pre-fire weather, terrain, drought, and vegetation/fuel conditions. Cleaned and enriched 2,397 CAL FIRE incident records with gridMET fire-weather variables, USGS 3DEP terrain features, U.S. Drought Monitor intensity, and LANDFIRE fuel layers. Evaluated multiclass severity prediction and binary high-severity triage models with time-based validation, imbalance-aware metrics, and threshold tuning.",
+        repoUrl: "https://github.com/mynameisdevinchau/wildfire-severity-v2",
         categories: ["ds", "da"],
       },
       {
@@ -85,18 +86,18 @@ export default function ProjectSection() {
         repoUrl: "https://github.com/mynameisdevinchau/starbucks-analysis",
         categories: ["da"],
       },
-     {
-  title: "Clinic No-Show Analysis",
-  year: "2025",
-  role: "Data Science & Healthcare Analytics",
-  stack: "Python, Pandas, NumPy, SQLite, SciPy, statsmodels, Tableau",
-  tagline:
-    "Statistical analysis of patient no-show behavior across 110,522 medical appointments.",
-  details:
-    "Analyzed 110,522 medical appointments to identify factors associated with patient no-shows, including scheduling delay, age, scholarship status, SMS reminders, and neighborhood-level patterns. Used SQL, chi-square tests, two-proportion tests, and logistic regression to show that longer scheduling delays were the strongest predictor of missed appointments, with no-show rates increasing from 4.65% for same-day visits to 33.16% for appointments scheduled 31 to 90 days out. Found that raw SMS reminder comparisons were confounded by scheduling delay, while adjusted models suggested reminders were associated with lower no-show odds.",
-  repoUrl: "https://github.com/mynameisdevinchau/clinic-no-show-analysis",
-  categories: ["ds", "da"],
-},
+      {
+        title: "Clinic No-Show Analysis",
+        year: "2025",
+        role: "Data Science & Healthcare Analytics",
+        stack: "Python, Pandas, NumPy, SQLite, SciPy, statsmodels, Tableau",
+        tagline:
+          "Statistical analysis of patient no-show behavior across 110,522 medical appointments.",
+        details:
+          "Analyzed 110,522 medical appointments to identify factors associated with patient no-shows, including scheduling delay, age, scholarship status, SMS reminders, and neighborhood-level patterns. Used SQL, chi-square tests, two-proportion tests, and logistic regression to show that longer scheduling delays were the strongest predictor of missed appointments, with no-show rates increasing from 4.65% for same-day visits to 33.16% for appointments scheduled 31 to 90 days out. Found that raw SMS reminder comparisons were confounded by scheduling delay, while adjusted models suggested reminders were associated with lower no-show odds.",
+        repoUrl: "https://github.com/mynameisdevinchau/clinic-no-show-analysis",
+        categories: ["ds", "da"],
+      },
     ],
     [],
   );
